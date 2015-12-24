@@ -1,0 +1,16 @@
+author="PDG Map Team";
+onLoadName = "PDG Template";
+onLoadMission = "PDG Template";
+loadScreen = "storm.jpg";
+respawn = BASE;
+respawndelay = 10;
+corpseRemovalMinTime = 30; //seconds
+wreckRemovalMinTime = 60; //seconds
+disabledAI = 1;
+
+class Header
+{
+	gameType = Coop; // MP mission type
+};
+
+
