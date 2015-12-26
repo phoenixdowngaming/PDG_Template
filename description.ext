@@ -1,7 +1,7 @@
 author="PDG Map Team";
-onLoadName = "PDG Template";
-onLoadMission = "PDG Template";
-loadScreen = "storm.jpg";
+onLoadName = "Template.";
+onLoadMission = "PDG Operations, Template";
+loadScreen = "pdglogo.jpg";
 respawn = BASE;
 respawndelay = 10;
 corpseRemovalMinTime = 30; //seconds
