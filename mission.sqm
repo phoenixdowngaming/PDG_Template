@@ -21,7 +21,9 @@ class Mission
 		"a3_map_altis",
 		"ace_common",
 		"A3_Characters_F_BLUFOR",
-		"task_force_radio_items"
+		"task_force_radio_items",
+		"A3_Characters_F_Gamma",
+		"A3_Characters_F_Kart"
 	};
 	addOnsAuto[]=
 	{
@@ -37,12 +39,14 @@ class Mission
 		"ace_interaction",
 		"ace_explosives",
 		"ace_captives",
-		"A3_Data_F_Curator_Virtual",
 		"3DEN",
 		"a3_modules_f_curator_curator",
 		"ace_common",
 		"task_force_radio_items",
 		"A3_Characters_F_BLUFOR",
+		"A3_Characters_F_Gamma",
+		"A3_Characters_F_Kart",
+		"A3_Data_F_Curator_Virtual",
 		"a3_map_altis"
 	};
 	randomSeed=257764;
@@ -66,7 +70,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=25;
+		items=27;
 		class Item0
 		{
 			side="LOGIC";
@@ -677,26 +681,6 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14530.011,17.91,16788.055};
-					id=16;
-					side="LOGIC";
-					vehicle="VirtualCurator_F";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.40000001;
-					syncId=2;
-					synchronizations[]={3,4};
-				};
-			};
-		};
-		class Item5
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={14529.136,17.91,16719.994};
 					class args
 					{
@@ -726,18 +710,18 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=17;
+					id=16;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=3;
-					synchronizations[]={2};
+					syncId=2;
+					synchronizations[]={37};
 				};
 			};
 		};
-		class Item6
+		class Item5
 		{
 			side="LOGIC";
 			class Vehicles
@@ -792,18 +776,18 @@ class Mission
 							typeName="Group";
 						};
 					};
-					id=18;
+					id=17;
 					side="LOGIC";
 					vehicle="ModuleCuratorSetCoefs_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=4;
-					synchronizations[]={2};
+					syncId=3;
+					synchronizations[]={37};
 				};
 			};
 		};
-		class Item7
+		class Item6
 		{
 			side="LOGIC";
 			class Vehicles
@@ -828,7 +812,7 @@ class Mission
 							typeName="role";
 						};
 					};
-					id=19;
+					id=18;
 					side="LOGIC";
 					vehicle="ACE_moduleAssignEngineerRoles";
 					leader=1;
@@ -854,7 +838,7 @@ class Mission
 							typeName="role";
 						};
 					};
-					id=20;
+					id=19;
 					side="LOGIC";
 					vehicle="ACE_moduleAssignMedicRoles";
 					lock="UNLOCKED";
@@ -862,7 +846,7 @@ class Mission
 				};
 			};
 		};
-		class Item8
+		class Item7
 		{
 			side="LOGIC";
 			class Vehicles
@@ -893,7 +877,7 @@ class Mission
 							typeName="Whitelist";
 						};
 					};
-					id=21;
+					id=20;
 					side="LOGIC";
 					vehicle="ACE_ModuleCheckPBOs";
 					leader=1;
@@ -902,7 +886,7 @@ class Mission
 				};
 			};
 		};
-		class Item9
+		class Item8
 		{
 			side="LOGIC";
 			class Vehicles
@@ -957,7 +941,7 @@ class Mission
 							typeName="same_lr_frequencies_for_side";
 						};
 					};
-					id=22;
+					id=21;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
 					leader=1;
@@ -966,7 +950,7 @@ class Mission
 				};
 			};
 		};
-		class Item10
+		class Item9
 		{
 			side="WEST";
 			class Vehicles
@@ -977,17 +961,105 @@ class Mission
 					position[]={14645.946,17.91,16769.576};
 					azimut=49.452301;
 					offsetY=0.00143909;
-					id=23;
+					id=22;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="CAPTAIN";
 					skill=1;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
 					description="PDG Ground Commander";
+					syncId=4;
+					synchronizations[]={32,33,30};
+				};
+			};
+		};
+		class Item10
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={14622.499,17.91,16760.598};
+					azimut=-408.40399;
+					offsetY=0.00143909;
+					id=23;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					description="Alpha Lead";
 					syncId=5;
-					synchronizations[]={33,34,31};
+					synchronizations[]={33,26};
+				};
+				class Item1
+				{
+					position[]={14624.177,17.91,16761.229};
+					azimut=-408.40399;
+					offsetY=0.00143909;
+					id=24;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.5;
+					description="Alpha";
+				};
+				class Item2
+				{
+					position[]={14623.938,17.91,16760.252};
+					azimut=-408.40399;
+					offsetY=0.00143909;
+					id=25;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.5;
+					description="Alpha LMG";
+				};
+				class Item3
+				{
+					position[]={14623.392,17.91,16759.514};
+					azimut=-408.40399;
+					offsetY=0.00143909;
+					id=26;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.5;
+					description="Alpha Marksman";
+				};
+				class Item4
+				{
+					position[]={14622.554,17.91,16759.197};
+					azimut=-408.40399;
+					offsetY=0.00143909;
+					id=27;
+					side="WEST";
+					vehicle="B_soldier_repair_F";
+					player="PLAY CDG";
+					skill=0.5;
+					description="Alpha Engineer";
+					syncId=6;
+					synchronizations[]={31};
+				};
+				class Item5
+				{
+					position[]={14621.677,17.91,16759.066};
+					azimut=-408.40399;
+					offsetY=0.00143909;
+					id=28;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.5;
+					description="Alpha Medic";
+					syncId=7;
+					synchronizations[]={33};
 				};
 			};
 		};
@@ -999,90 +1071,84 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={14622.499,17.91,16760.598};
-					azimut=-408.40399;
+					position[]={14627.313,17.91,16764.654};
+					azimut=-55.9776;
 					offsetY=0.00143909;
-					id=24;
+					id=29;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Alpha Lead";
-					syncId=6;
-					synchronizations[]={34,27};
+					description="Bravo Lead";
+					syncId=8;
+					synchronizations[]={33,25};
 				};
 				class Item1
 				{
-					position[]={14624.177,17.91,16761.229};
-					azimut=-408.40399;
+					position[]={14629.355,17.91,16765.592};
+					azimut=-55.9776;
 					offsetY=0.00143909;
-					id=25;
+					id=30;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Alpha";
+					description="Bravo Marksman";
 				};
 				class Item2
 				{
-					position[]={14623.938,17.91,16760.252};
-					azimut=-408.40399;
+					position[]={14629.308,17.91,16764.686};
+					azimut=-55.9776;
 					offsetY=0.00143909;
-					id=26;
+					id=31;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Alpha LMG";
+					description="Bravo";
 				};
 				class Item3
 				{
-					position[]={14623.392,17.91,16759.514};
-					azimut=-408.40399;
+					position[]={14628.801,17.91,16763.768};
+					azimut=-55.9776;
 					offsetY=0.00143909;
-					id=27;
+					id=32;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Alpha Marksman";
+					description="Bravo LMG";
 				};
 				class Item4
 				{
-					position[]={14622.554,17.91,16759.197};
-					azimut=-408.40399;
+					position[]={14627.8,17.91,16763.082};
+					azimut=-55.9776;
 					offsetY=0.00143909;
-					id=28;
+					id=33;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Alpha Engineer";
-					syncId=7;
-					synchronizations[]={32};
+					description="Bravo Engineer";
+					syncId=9;
+					synchronizations[]={31};
 				};
 				class Item5
 				{
-					position[]={14621.677,17.91,16759.066};
-					azimut=-408.40399;
+					position[]={14626.907,17.91,16762.641};
+					azimut=-55.9776;
 					offsetY=0.00143909;
-					id=29;
+					id=34;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Alpha Medic";
-					syncId=8;
-					synchronizations[]={34};
+					description="Bravo Medic";
+					syncId=10;
+					synchronizations[]={33};
 				};
 			};
 		};
@@ -1094,90 +1160,84 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={14627.313,17.91,16764.654};
-					azimut=-55.9776;
+					position[]={14626.75,17.91,16755.539};
+					azimut=-53.015598;
 					offsetY=0.00143909;
-					id=30;
+					id=35;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Bravo Lead";
-					syncId=9;
-					synchronizations[]={34,26};
+					description="Charlie Lead";
+					syncId=11;
+					synchronizations[]={33,27};
 				};
 				class Item1
 				{
-					position[]={14629.355,17.91,16765.592};
-					azimut=-55.9776;
+					position[]={14628.37,17.91,16756.297};
+					azimut=-53.015598;
 					offsetY=0.00143909;
-					id=31;
+					id=36;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Bravo Marksman";
+					description="Charlie Marksman";
 				};
 				class Item2
 				{
-					position[]={14629.308,17.91,16764.686};
-					azimut=-55.9776;
+					position[]={14628.262,17.91,16755.406};
+					azimut=-53.015598;
 					offsetY=0.00143909;
-					id=32;
+					id=37;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Bravo";
+					description="Charlie LMG";
 				};
 				class Item3
 				{
-					position[]={14628.801,17.91,16763.768};
-					azimut=-55.9776;
+					position[]={14627.715,17.91,16754.521};
+					azimut=-53.015598;
 					offsetY=0.00143909;
-					id=33;
+					id=38;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Bravo LMG";
+					description="Charlie";
 				};
 				class Item4
 				{
-					position[]={14627.8,17.91,16763.082};
-					azimut=-55.9776;
+					position[]={14626.687,17.91,16753.889};
+					azimut=-53.015598;
 					offsetY=0.00143909;
-					id=34;
+					id=39;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Bravo Engineer";
-					syncId=10;
-					synchronizations[]={32};
+					description="Charlie Engineer";
+					syncId=12;
+					synchronizations[]={31};
 				};
 				class Item5
 				{
-					position[]={14626.907,17.91,16762.641};
-					azimut=-55.9776;
+					position[]={14625.779,17.91,16753.494};
+					azimut=-53.015598;
 					offsetY=0.00143909;
-					id=35;
+					id=40;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Bravo Medic";
-					syncId=11;
-					synchronizations[]={34};
+					description="Charlie Medic";
+					syncId=13;
+					synchronizations[]={33};
 				};
 			};
 		};
@@ -1189,90 +1249,84 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={14626.75,17.91,16755.539};
-					azimut=-53.015598;
+					position[]={14632.351,17.91,16758.959};
+					azimut=-52.098598;
 					offsetY=0.00143909;
-					id=36;
+					id=41;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_SL_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Charlie Lead";
-					syncId=12;
-					synchronizations[]={34,28};
+					description="Delta Lead";
+					syncId=14;
+					synchronizations[]={33,28};
 				};
 				class Item1
 				{
-					position[]={14628.37,17.91,16756.297};
-					azimut=-53.015598;
+					position[]={14633.979,17.91,16759.689};
+					azimut=-52.098598;
 					offsetY=0.00143909;
-					id=37;
+					id=42;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Charlie Marksman";
+					description="Delta LMG";
 				};
 				class Item2
 				{
-					position[]={14628.262,17.91,16755.406};
-					azimut=-53.015598;
+					position[]={14633.866,17.91,16758.807};
+					azimut=-52.098598;
 					offsetY=0.00143909;
-					id=38;
+					id=43;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Charlie LMG";
+					description="Delta";
 				};
 				class Item3
 				{
-					position[]={14627.715,17.91,16754.521};
-					azimut=-53.015598;
+					position[]={14633.295,17.91,16757.928};
+					azimut=-52.098598;
 					offsetY=0.00143909;
-					id=39;
+					id=44;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Charlie";
+					description="Delta Marksman";
 				};
 				class Item4
 				{
-					position[]={14626.687,17.91,16753.889};
-					azimut=-53.015598;
+					position[]={14632.271,17.91,16757.303};
+					azimut=-52.098598;
 					offsetY=0.00143909;
-					id=40;
+					id=45;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Charlie Engineer";
-					syncId=13;
-					synchronizations[]={32};
+					description="Delta Engineer";
+					syncId=15;
+					synchronizations[]={31};
 				};
 				class Item5
 				{
-					position[]={14625.779,17.91,16753.494};
-					azimut=-53.015598;
+					position[]={14631.342,17.91,16756.945};
+					azimut=-52.098598;
 					offsetY=0.00143909;
-					id=41;
+					id=46;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Charlie Medic";
-					syncId=14;
-					synchronizations[]={34};
+					description="Delta Medic";
+					syncId=16;
+					synchronizations[]={33};
 				};
 			};
 		};
@@ -1281,93 +1335,63 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=6;
+				items=4;
 				class Item0
 				{
-					position[]={14632.351,17.91,16758.959};
-					azimut=-52.098598;
+					position[]={14636.517,17.91,16767.541};
+					azimut=-422.07401;
 					offsetY=0.00143909;
-					id=42;
+					id=47;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					leader=1;
-					rank="SERGEANT";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Delta Lead";
-					syncId=15;
-					synchronizations[]={34,29};
+					description="Armor Lead";
+					syncId=17;
+					synchronizations[]={31,29};
 				};
 				class Item1
 				{
-					position[]={14633.979,17.91,16759.689};
-					azimut=-52.098598;
+					position[]={14637.984,17.91,16768.545};
+					azimut=-422.07401;
 					offsetY=0.00143909;
-					id=43;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAY CDG";
-					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Delta LMG";
-				};
-				class Item2
-				{
-					position[]={14633.866,17.91,16758.807};
-					azimut=-52.098598;
-					offsetY=0.00143909;
-					id=44;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAY CDG";
-					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Delta";
-				};
-				class Item3
-				{
-					position[]={14633.295,17.91,16757.928};
-					azimut=-52.098598;
-					offsetY=0.00143909;
-					id=45;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAY CDG";
-					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Delta Marksman";
-				};
-				class Item4
-				{
-					position[]={14632.271,17.91,16757.303};
-					azimut=-52.098598;
-					offsetY=0.00143909;
-					id=46;
+					id=48;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Delta Engineer";
-					syncId=16;
-					synchronizations[]={32};
+					description="Armor";
+					syncId=18;
+					synchronizations[]={31};
 				};
-				class Item5
+				class Item2
 				{
-					position[]={14631.342,17.91,16756.945};
-					azimut=-52.098598;
+					position[]={14638.021,17.91,16767.662};
+					azimut=-422.07401;
 					offsetY=0.00143909;
-					id=47;
+					id=49;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Delta Medic";
-					syncId=17;
-					synchronizations[]={34};
+					description="Armor";
+					syncId=19;
+					synchronizations[]={31};
+				};
+				class Item3
+				{
+					position[]={14637.627,17.91,16766.693};
+					azimut=-422.07401;
+					offsetY=0.00143909;
+					id=50;
+					side="WEST";
+					vehicle="B_soldier_repair_F";
+					player="PLAY CDG";
+					skill=0.5;
+					description="Armor";
+					syncId=20;
+					synchronizations[]={31};
 				};
 			};
 		};
@@ -1379,89 +1403,19 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={14636.517,17.91,16767.541};
-					azimut=-422.07401;
-					offsetY=0.00143909;
-					id=48;
-					side="WEST";
-					vehicle="B_soldier_repair_F";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Armor Lead";
-					syncId=18;
-					synchronizations[]={32,30};
-				};
-				class Item1
-				{
-					position[]={14637.984,17.91,16768.545};
-					azimut=-422.07401;
-					offsetY=0.00143909;
-					id=49;
-					side="WEST";
-					vehicle="B_soldier_repair_F";
-					player="PLAY CDG";
-					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Armor";
-					syncId=19;
-					synchronizations[]={32};
-				};
-				class Item2
-				{
-					position[]={14638.021,17.91,16767.662};
-					azimut=-422.07401;
-					offsetY=0.00143909;
-					id=50;
-					side="WEST";
-					vehicle="B_soldier_repair_F";
-					player="PLAY CDG";
-					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Armor";
-					syncId=20;
-					synchronizations[]={32};
-				};
-				class Item3
-				{
-					position[]={14637.627,17.91,16766.693};
-					azimut=-422.07401;
-					offsetY=0.00143909;
-					id=51;
-					side="WEST";
-					vehicle="B_soldier_repair_F";
-					player="PLAY CDG";
-					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
-					description="Armor";
-					syncId=21;
-					synchronizations[]={32};
-				};
-			};
-		};
-		class Item16
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
 					position[]={14634.341,17.91,16764.123};
 					azimut=-406.26901;
 					offsetY=0.00143909;
 					special="NONE";
-					id=52;
+					id=51;
 					side="WEST";
 					vehicle="B_Pilot_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
 					description="Aviation Lead";
-					syncId=22;
-					synchronizations[]={34,30};
+					syncId=21;
+					synchronizations[]={33,29};
 				};
 				class Item1
 				{
@@ -1469,15 +1423,14 @@ class Mission
 					azimut=-406.26901;
 					offsetY=0.00143909;
 					special="NONE";
-					id=53;
+					id=52;
 					side="WEST";
 					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
 					description="Aviation";
-					syncId=23;
-					synchronizations[]={34};
+					syncId=22;
+					synchronizations[]={33};
 				};
 				class Item2
 				{
@@ -1485,15 +1438,14 @@ class Mission
 					azimut=-406.26901;
 					offsetY=0.00143909;
 					special="NONE";
-					id=54;
+					id=53;
 					side="WEST";
 					vehicle="B_Pilot_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
 					description="Aviation";
-					syncId=24;
-					synchronizations[]={34};
+					syncId=23;
+					synchronizations[]={33};
 				};
 				class Item3
 				{
@@ -1501,19 +1453,18 @@ class Mission
 					azimut=-406.26901;
 					offsetY=0.00143909;
 					special="NONE";
-					id=55;
+					id=54;
 					side="WEST";
 					vehicle="B_helicrew_F";
 					player="PLAY CDG";
 					skill=0.5;
-					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;";
 					description="Aviation";
-					syncId=25;
-					synchronizations[]={34};
+					syncId=24;
+					synchronizations[]={33};
 				};
 			};
 		};
-		class Item17
+		class Item16
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1546,14 +1497,14 @@ class Mission
 							typeName="LrFreq";
 						};
 					};
-					id=56;
+					id=55;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioFrequencies";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=26;
-					synchronizations[]={9};
+					syncId=25;
+					synchronizations[]={8};
 				};
 				class Item1
 				{
@@ -1605,7 +1556,7 @@ class Mission
 							typeName="same_lr_frequencies_for_side";
 						};
 					};
-					id=57;
+					id=56;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
 					lock="UNLOCKED";
@@ -1613,7 +1564,7 @@ class Mission
 				};
 			};
 		};
-		class Item18
+		class Item17
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1646,18 +1597,18 @@ class Mission
 							typeName="LrFreq";
 						};
 					};
-					id=58;
+					id=57;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioFrequencies";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=27;
-					synchronizations[]={6};
+					syncId=26;
+					synchronizations[]={5};
 				};
 			};
 		};
-		class Item19
+		class Item18
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1690,18 +1641,18 @@ class Mission
 							typeName="LrFreq";
 						};
 					};
-					id=59;
+					id=58;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioFrequencies";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=28;
-					synchronizations[]={12};
+					syncId=27;
+					synchronizations[]={11};
 				};
 			};
 		};
-		class Item20
+		class Item19
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1734,18 +1685,18 @@ class Mission
 							typeName="LrFreq";
 						};
 					};
-					id=60;
+					id=59;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioFrequencies";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=29;
-					synchronizations[]={15};
+					syncId=28;
+					synchronizations[]={14};
 				};
 			};
 		};
-		class Item21
+		class Item20
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1778,18 +1729,18 @@ class Mission
 							typeName="LrFreq";
 						};
 					};
-					id=61;
+					id=60;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioFrequencies";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=30;
-					synchronizations[]={22,18};
+					syncId=29;
+					synchronizations[]={21,17};
 				};
 			};
 		};
-		class Item22
+		class Item21
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1822,18 +1773,18 @@ class Mission
 							typeName="LrFreq";
 						};
 					};
-					id=62;
+					id=61;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioFrequencies";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=31;
-					synchronizations[]={31,5};
+					syncId=30;
+					synchronizations[]={30,4};
 				};
 			};
 		};
-		class Item23
+		class Item22
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1858,18 +1809,18 @@ class Mission
 							typeName="role";
 						};
 					};
-					id=63;
+					id=62;
 					side="LOGIC";
 					vehicle="ACE_moduleAssignEngineerRoles";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=32;
-					synchronizations[]={7,13,10,16,18,21,19,20};
+					syncId=31;
+					synchronizations[]={6,12,9,15,17,20,18,19};
 				};
 			};
 		};
-		class Item24
+		class Item23
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1894,14 +1845,14 @@ class Mission
 							typeName="role";
 						};
 					};
-					id=64;
+					id=63;
 					side="LOGIC";
 					vehicle="ACE_moduleAssignMedicRoles";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=33;
-					synchronizations[]={5};
+					syncId=32;
+					synchronizations[]={4};
 				};
 				class Item1
 				{
@@ -1922,13 +1873,90 @@ class Mission
 							typeName="role";
 						};
 					};
-					id=65;
+					id=64;
 					side="LOGIC";
 					vehicle="ACE_moduleAssignMedicRoles";
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=33;
+					synchronizations[]={5,8,11,14,7,10,13,16,4,24,21,23,22};
+				};
+			};
+		};
+		class Item24
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14515.678,17.91,16745.24};
+					id=65;
+					side="WEST";
+					vehicle="B_soldier_UAV_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.40000001;
+					text="ZeusBlu";
+					description="Blufor Zeus";
 					syncId=34;
-					synchronizations[]={6,9,12,15,8,11,14,17,5,25,22,24,23};
+					synchronizations[]={37};
+				};
+			};
+		};
+		class Item25
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14511.092,17.91,16744.936};
+					id=66;
+					side="EAST";
+					vehicle="O_soldier_UAV_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.40000001;
+					text="ZeusOp";
+					description="Opfor Zeus";
+					syncId=35;
+					synchronizations[]={37};
+				};
+			};
+		};
+		class Item26
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={14504.096,17.91,16743.969};
+					id=67;
+					side="CIV";
+					vehicle="C_Marshal_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.40000001;
+					text="ZeusCiv";
+					description="Civ Zeus";
+					syncId=36;
+					synchronizations[]={37};
+				};
+				class Item1
+				{
+					position[]={14519.771,17.91,16752.408};
+					id=68;
+					side="LOGIC";
+					vehicle="VirtualCurator_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					syncId=37;
+					synchronizations[]={2,3,34,35,36};
 				};
 			};
 		};
