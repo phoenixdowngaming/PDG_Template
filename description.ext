@@ -1,6 +1,6 @@
 author="PDG Map Team";
 onLoadName = "Template.";
-onLoadMission = "PDG Operations, Template";
+onLoadMission = "PDG Operations, Template - Joke started this";
 loadScreen = "pdglogo.jpg";
 respawn = BASE;
 respawndelay = 10;
@@ -12,5 +12,3 @@ class Header
 {
 	gameType = Coop; // MP mission type
 };
-
-
